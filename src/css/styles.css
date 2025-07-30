@@ -1,0 +1,193 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    color: #5A5A5A;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.intro {
+    background-color: #404040;
+    background-image: url(../images/dark-ribs.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    align-items: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+    font-size: 2.25rem;
+    color: #fff;
+    font-weight: 300;
+    width: 300px;
+}
+
+h2 {
+    font-size: 1.3125rem;
+}
+
+strong,
+h2,
+.top-text,
+h3,
+button {
+    font-weight: 900;
+}
+
+.top-text,
+button {
+    letter-spacing: 1.75px;
+}
+
+.subheading,
+.top-text,
+h3 {
+    color: #f18119;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.top-text,
+.notification {
+    font-size: .625rem;
+    letter-spacing: 1px;
+}
+
+.main-title {
+    color: #404040;
+}
+
+/* INTRO LAYOUT */
+
+.subheading {
+    margin-bottom: 1.5em;
+}
+
+.top-text {
+    order: -1;
+    border-top: 5px solid #f18119;
+    border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+    padding: .375em 0;
+}
+
+/* MAIN CONTENT LAYOUT */
+
+.main-wrapper {
+    padding: 2em 1.25em 3.5em;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h3 {
+    margin-bottom: 1.5em;
+}
+
+.main-text {
+    margin-bottom: .75em;
+}
+
+/* FORM LAYOUT */
+
+form {
+    width: 255px;
+    width: 80%;
+    min-width: 255px;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+    padding: .5em;
+    margin-bottom: .75em;
+    border: 1px solid #818181;
+    text-align: inherit;
+}
+
+input::placeholder {
+    color: #989898;
+}
+
+input,
+button {
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    background: linear-gradient(270deg, #FF713B, #FFA51D);
+    color: #fff;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: .625rem;
+    margin-bottom: 1em;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+button:hover,
+button:focus {
+    transform: scale(1.1);
+}
+
+input:focus,
+button:focus {
+    outline: none;
+    border: 2px solid;
+    border-image: linear-gradient(to right, #FF713B, #FFA51D) 1;
+    box-shadow: 0 0 8px rgba(255, 165, 29, 0.5);
+}
+
+@media (min-width: 500px) {
+    body {
+        font-size: 1.125rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        width: 480px;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .intro {
+        min-height: 100vh;
+        width: 60%;
+    }
+
+    .main-content {
+        display: grid;
+        place-items: center;
+        width: 40%;
+        min-height: 100vh;
+    }
+
+    .main-wrapper {
+        padding: 0 1.75em;
+    }
+}
